@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabela de Usuários</title>
+
+    <script src="script7.js"></script>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+        th, td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h2>Tabela de Usuários</h2>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>Senha</th>
+        </tr>
+        <!-- Loop para iterar sobre os usuários e exibir em forma de tabela -->
+        <script>
+            const usuarios = [
+                {"id": 1, "email": "email@email.com", "senha": "senha123"},
+                {"id": 2, "email": "infinity@email.com", "senha": "infinity123"},
+                {"id": 3, "email": "exemplo@email.com", "senha": "exemplo123"}
+            ];
+
+            usuarios.forEach(usuario => {
+                document.write(`<tr>`);
+                document.write(`<td>${usuario.id}</td>`);
+                document.write(`<td>${usuario.email}</td>`);
+                document.write(`<td>${usuario.senha}</td>`);
+                document.write(`</tr>`);
+            });
+        </script>
+    </table>
+</body>
+</html>
+
+
+
